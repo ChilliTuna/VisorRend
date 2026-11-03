@@ -75,6 +75,18 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>D:\Programming\VisorRend\VisorRend\VisorRendCore\vcpkg_installed\x64-windows\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>D:\Programming\VisorRend\VisorRend\VisorRendCore\vcpkg_installed\x64-windows\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>D:\Programming\VisorRend\VisorRend\VisorRendCore\vcpkg_installed\x64-windows\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>D:\Programming\VisorRend\VisorRend\VisorRendCore\vcpkg_installed\x64-windows\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -132,11 +144,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Source\ColourTester.cpp" />
-    <ClCompile Include="Source\EntryPoint.cpp" />
+    <ClCompile Include="src\ProofOfConcept\ColourTester.cpp" />
+    <ClCompile Include="src\Utilities\TimeManager.cpp" />
+    <ClCompile Include="src\Utilities\WindowManager.cpp" />
+    <ClCompile Include="src\EntryPoint.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\ColourTester.h" />
+    <ClInclude Include="src\ProofOfConcept\ColourTester.h" />
+    <ClInclude Include="src\Utilities\TimeManager.h" />
+    <ClInclude Include="src\Utilities\WindowManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
